@@ -57,6 +57,7 @@ Profile, preferences, watchlist, comic bookmarks, TV bookmarks and VIP preview u
 - `css/base.css`: retained primitive/component foundation; `css/design.css`: visual tokens and shared layouts; section CSS files scope specialized experiences.
 - `assets/`: bundled font, original SVG studies, optimized cinematic hero and favicon. See [artwork provenance](docs/ARTWORK.md).
 - `docs/`: design direction, validation report, screenshots and future integration boundaries.
+- [Planned media automation stack](docs/MEDIA_AUTOMATION_PLAN.md): Sonarr, Radarr, Prowlarr, Seerr, Plex, and VPN-isolated qBittorrent (not installed/connected).
 
 Classic scripts load in explicit dependency order and expose a small `featureActions` / `featureHooks` extension surface. No code is dynamically downloaded.
 
