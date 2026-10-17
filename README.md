@@ -80,3 +80,9 @@ See [validation results](docs/VALIDATION.md). The accessibility script is a focu
 GitHub Pages continues to publish **`main` → `/(root)`**. Commit and push the static files; no custom workflow or deployment-setting change is needed. Asset paths are relative and tested under `/glint-ui-demo/`.
 
 [CODEX_MASTER_PROMPT.md](CODEX_MASTER_PROMPT.md) remains a future architecture brief. Its proposed framework/backend migration is not implemented in this static modernization. See [integration boundaries](docs/PHASE1_INTEGRATION_PLAN.md).
+
+## Demo artwork (TMDb)
+
+The 24 sample movie/TV items now include verified TMDb poster and backdrop image URLs. Images are loaded from the TMDb CDN at runtime, and the original Glint SVG art remains a fallback if an image is unavailable. The home and Watch features use an Interstellar backdrop; comics, original games, and projects continue using Glint illustrations.
+
+TMDb attribution appears in the site footer: **“This product uses the TMDB API but is not endorsed or certified by TMDB.”** This demo is non-commercial and does not represent a TMDb endorsement. TMDb states that non-commercial API use with attribution is free; a revenue-generating or commercial Glint launch requires appropriate licensing/permissions and independent review of media artwork rights. See https://developer.themoviedb.org/docs/faq. The current static site contains no API key and does not call TMDb's search API from visitors' browsers.
