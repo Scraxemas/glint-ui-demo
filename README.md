@@ -1,33 +1,82 @@
-# glint. — Interactive UI Demo
+# glint. — Your space to unwind
 
-A frontend-only prototype of **Glint**, a personal entertainment portal.
+A premium, frontend-only entertainment lounge. Built with static HTML, CSS, and JavaScript; no framework, package installation, build step, or runtime CDN is required.
 
-**Live preview:** https://scraxemas.github.io/glint-ui-demo/
+**Live site:** https://scraxemas.github.io/glint-ui-demo/
 
-## Explore the prototype
+## Explore
 
-- **Home** — featured content, recommendations and activity
-- **Watch** — movie and series catalog, title previews and simulated playback
-- **Live** — six simulated TV channels, electronic program guide and DVR controls
-- **Comics** — catalog and interactive reader preview
-- **Arcade** — browser game hub, including a playable mini-game
-- **Projects** — showcase for personal games and GitHub projects
-- **Servers** — Minecraft and Valheim server listings, modpacks and join details
-- **VIP** — $0.99/month membership mockup (no payment processing)
-- **Account / Admin** — profile and management interfaces
+| Route | Experience |
+| --- | --- |
+| `#home` | Cinematic feature, resume shelf, six-channel preview, reading, arcade, studio and community worlds |
+| `#watch` | Portrait catalog, landscape shelves, genres, search, sorting, saved list, title/episode details and simulated player |
+| `#live` | Six canonical channels, clock-derived guide, channel surfing, compact guide, timeshift simulation and recording bookmarks |
+| `#comics` | Manga/comics filters, creator search, reading shelves and a 12-page original illustrated reader |
+| `#arcade` | Original-first gaming lounge, filters/search, development previews and playable Neon Snake |
+| `#projects` | Studio showcase, technology labels, development notes and verified repository links |
+| `#servers` | Minecraft/Valheim demo listings, requirements, rules and simulated access requests |
+| `#vip` | Optional $0.99/month membership concept, local supporter styling and billing/cancellation previews |
+| `#account` | Local profile, avatar appearance, accessibility/preferences, saved lists and reset controls |
+| `#admin` | Clearly marked management previews; all services disconnected |
 
-This is an **interactive visual demo only**. Plex, ErsatzTV, Komga, GitHub, Stripe, and Minecraft/Valheim services are **not connected**. All content, stream controls, server statuses, and billing interactions are simulated. No real copyrighted media or payment transactions are hosted here.
+Hash routes work on direct visits, refresh, and browser back/forward without GitHub Pages rewrites. Mobile has a navigation drawer and six persistent shortcuts.
 
-## Deployment
+## Run locally
 
-This repository uses **GitHub Pages** with `main` as the source and `/(root)` as the published directory. The self-contained `index.html` includes its CSS and JavaScript so the site requires **no build step or dependencies**.
+From the repository directory:
 
-To view locally, download `index.html` and open it in a browser, or run:
-
-```bash
-python -m http.server 4173
+```sh
+python -m http.server 4173 --bind 127.0.0.1
 ```
 
-## Future development
+Open http://127.0.0.1:4173/. Keep `assets/`, `css/`, and `js/` beside `index.html` when copying or deploying.
 
-See [CODEX_MASTER_PROMPT.md](CODEX_MASTER_PROMPT.md) for instructions to rebuild this proof of concept as a maintainable Next.js / TypeScript application. The existing HTML prototype should remain the reference for the UI while backend integration is planned.
+## Demo boundaries
+
+No Plex, playout engine, Komga, authentication, Stripe, or game-server service is connected. Media names and metadata are illustrative; no commercial video, book files, ROMs, or real payment data are included. Server addresses, versions, and counts remain unavailable until configured. Project art is original concept art, not a claim of actual gameplay screenshots or released builds. Only Neon Snake is playable here.
+
+The Watch player simulates pause, seek, captions, mute and fullscreen. Live uses illustrative half-hour schedule slots and a virtual 30-minute buffer. Record saves a bookmark, never video. The reader shows **The Quiet Signal**, an original 12-page illustration study, regardless of the catalog title chosen.
+
+Profile, preferences, watchlist, comic bookmarks, TV bookmarks and VIP preview use `glint_*` localStorage keys. No passwords or tokens are stored. Reset through **Account → Privacy & access → Reset local demo**. Signing out returns to a validated local-profile form; it does not contact an identity provider.
+
+## Keyboard and accessibility
+
+- Ctrl/Cmd+K opens search. Escape dismisses dialogs or exits fullscreen.
+- Dialogs and the mobile drawer trap focus and restore it on dismissal. A skip link, visible focus rings, semantic labels and active navigation states are provided.
+- Focus the Live picture: Space pauses, arrows seek, Page Up/Down change channel, G opens the compact guide, F opens fullscreen.
+- Reader arrows follow the selected LTR/RTL mode. Single-page, vertical-scroll, page-picker and fullscreen modes are available.
+- Snake supports arrows/WASD and touch direction buttons.
+- OS reduced-motion and local reduced-motion settings are respected.
+
+## Source map
+
+- `js/data.js`: the preserved demonstration catalog.
+- `js/core.js`: shared state, icons, storage, search, event dispatch and original Snake game.
+- `js/shell.js`: navigation, shared cards, homepage, modal/focus infrastructure and rendering.
+- `js/media.js`, `js/live.js`, `js/community.js`: section views and local interactions.
+- `css/base.css`: retained primitive/component foundation; `css/design.css`: visual tokens and shared layouts; section CSS files scope specialized experiences.
+- `assets/`: bundled font, original SVG studies, optimized cinematic hero and favicon. See [artwork provenance](docs/ARTWORK.md).
+- `docs/`: design direction, validation report, screenshots and future integration boundaries.
+
+Classic scripts load in explicit dependency order and expose a small `featureActions` / `featureHooks` extension surface. No code is dynamically downloaded.
+
+## Validation
+
+Browser checks are plain Playwright CLI functions, not application dependencies. With Playwright CLI already available, start a browser session **from this repository directory**:
+
+```sh
+playwright-cli -s=glint open http://127.0.0.1:4173/
+playwright-cli -s=glint run-code --filename=tests/layouts.js
+playwright-cli -s=glint run-code --filename=tests/interactions.js
+playwright-cli -s=glint run-code --filename=tests/accessibility.js
+```
+
+The interaction script resets this origin's local `glint_*` demo data. Run it in a disposable browser session. Layout captures are written to `docs/screenshots/` relative to the browser session's starting directory. Scripts return failures explicitly; inspect their returned JSON. They can also target the published URL.
+
+See [validation results](docs/VALIDATION.md). The accessibility script is a focused semantic/solid-color contrast audit, not a complete WCAG certification.
+
+## Publish
+
+GitHub Pages continues to publish **`main` → `/(root)`**. Commit and push the static files; no custom workflow or deployment-setting change is needed. Asset paths are relative and tested under `/glint-ui-demo/`.
+
+[CODEX_MASTER_PROMPT.md](CODEX_MASTER_PROMPT.md) remains a future architecture brief. Its proposed framework/backend migration is not implemented in this static modernization. See [integration boundaries](docs/PHASE1_INTEGRATION_PLAN.md).

@@ -1,0 +1,75 @@
+/* All data in this file is illustrative demo content, not verified media availability or live server information. */
+window.GLINT_DATA = {
+  movies: [
+    {id:'interstellar', title:'Interstellar', type:'Movie', year:'2014', genre:'Sci-Fi', rating:'PG-13', length:'2h 49m', description:'Explorers travel through a wormhole as humanity searches for a new home.', art:'cosmos', progress:38, tag:'THE FEATURE', quality:'4K'},
+    {id:'the-last-of-us', title:'The Last of Us', type:'Series', year:'2023', genre:'Drama', rating:'TV-MA', length:'2 seasons', description:'A hardened survivor escorts a young girl through a world changed by a devastating pandemic.', art:'forest', progress:68, quality:'HD'},
+    {id:'breaking-bad', title:'Breaking Bad', type:'Series', year:'2008', genre:'Drama', rating:'TV-MA', length:'5 seasons', description:'A chemistry teacher enters the criminal underworld in a desperate bid to provide for his family.', art:'desert', progress:23, quality:'HD'},
+    {id:'the-matrix', title:'The Matrix', type:'Movie', year:'1999', genre:'Sci-Fi', rating:'R', length:'2h 16m', description:'A hacker discovers that the world he knows is a manufactured simulation.', art:'matrix', progress:0, quality:'HD'},
+    {id:'game-of-thrones', title:'Game of Thrones', type:'Series', year:'2011', genre:'Fantasy', rating:'TV-MA', length:'8 seasons', description:'Great houses compete for power as a supernatural danger rises beyond the northern wall.', art:'throne', progress:0, quality:'HD'},
+    {id:'jurassic-park', title:'Jurassic Park', type:'Movie', year:'1993', genre:'Adventure', rating:'PG-13', length:'2h 7m', description:'A theme park filled with resurrected dinosaurs becomes a fight for survival.', art:'jungle', progress:0, quality:'HD'},
+    {id:'john-wick', title:'John Wick', type:'Movie', year:'2014', genre:'Action', rating:'R', length:'1h 41m', description:'A retired assassin returns to the criminal underworld after a devastating loss.', art:'neon', progress:0, quality:'4K'},
+    {id:'star-trek', title:'Star Trek: The Next Generation', type:'Series', year:'1987', genre:'Sci-Fi', rating:'TV-PG', length:'7 seasons', description:'The crew of the Enterprise explores the stars under Captain Jean-Luc Picard.', art:'stellar', progress:44, quality:'HD'},
+    {id:'stranger-things', title:'Stranger Things', type:'Series', year:'2016', genre:'Horror', rating:'TV-14', length:'5 seasons', description:'Friends in a small town confront supernatural mysteries and a parallel dimension.', art:'purple', progress:0, quality:'HD'},
+    {id:'back-to-the-future', title:'Back to the Future', type:'Movie', year:'1985', genre:'Adventure', rating:'PG', length:'1h 56m', description:'An accidental trip to the 1950s puts a teenager’s own future at risk.', art:'sunset', progress:0, quality:'HD'},
+    {id:'the-office', title:'The Office', type:'Series', year:'2005', genre:'Comedy', rating:'TV-14', length:'9 seasons', description:'An everyday paper company becomes an unforgettable workplace comedy.', art:'office', progress:76, quality:'HD'},
+    {id:'the-walking-dead', title:'The Walking Dead', type:'Series', year:'2010', genre:'Horror', rating:'TV-MA', length:'11 seasons', description:'Survivors try to preserve their humanity in a world overrun by the undead.', art:'haze', progress:0, quality:'HD'},
+    {id:'harry-potter', title:'Harry Potter and the Sorcerer’s Stone', type:'Movie', year:'2001', genre:'Fantasy', rating:'PG', length:'2h 32m', description:'A young wizard begins his first year at a school of magic.', art:'magic', progress:0, quality:'HD'},
+    {id:'spider-man', title:'Spider-Man', type:'Movie', year:'2002', genre:'Action', rating:'PG-13', length:'2h 1m', description:'A student discovers extraordinary powers and learns the meaning of responsibility.', art:'spider', progress:0, quality:'HD'},
+    {id:'pokemon', title:'Pokémon', type:'Series', year:'1997', genre:'Anime', rating:'TV-Y7', length:'Multi-season', description:'An aspiring Trainer travels with friends in search of Pokémon and adventure.', art:'pokemon', progress:0, quality:'HD'},
+    {id:'naruto', title:'Naruto', type:'Series', year:'2002', genre:'Anime', rating:'TV-PG', length:'5 seasons', description:'A spirited young ninja dreams of becoming the leader of his village.', art:'ember', progress:0, quality:'HD'},
+    {id:'superbad', title:'Superbad', type:'Movie', year:'2007', genre:'Comedy', rating:'R', length:'1h 53m', description:'Two high-school friends stumble through a disastrously eventful night.', art:'party', progress:0, quality:'HD'},
+    {id:'lord-of-the-rings', title:'The Fellowship of the Ring', type:'Movie', year:'2001', genre:'Fantasy', rating:'PG-13', length:'2h 58m', description:'A small fellowship begins the dangerous journey to destroy a powerful ring.', art:'mountain', progress:0, quality:'HD'},
+    {id:'fallout', title:'Fallout', type:'Series', year:'2024', genre:'Sci-Fi', rating:'TV-MA', length:'1+ seasons', description:'A vault dweller emerges into an irradiated world of factions and wasteland mysteries.', art:'vault', progress:0, quality:'HD'},
+    {id:'the-bear', title:'The Bear', type:'Series', year:'2022', genre:'Drama', rating:'TV-MA', length:'Multi-season', description:'A gifted chef attempts to transform a chaotic family restaurant.', art:'copper', progress:0, quality:'HD'},
+    {id:'the-dark-knight', title:'The Dark Knight', type:'Movie', year:'2008', genre:'Action', rating:'PG-13', length:'2h 32m', description:'Batman confronts a criminal mastermind whose chaos tests Gotham.', art:'bat', progress:0, quality:'HD'},
+    {id:'doctor-who', title:'Doctor Who', type:'Series', year:'2005', genre:'Sci-Fi', rating:'TV-PG', length:'Multi-season', description:'An enigmatic traveler explores time and space with a rotating cast of companions.', art:'time', progress:0, quality:'HD'},
+    {id:'ghost-whisperer', title:'Ghost Whisperer', type:'Series', year:'2005', genre:'Horror', rating:'TV-PG', length:'5 seasons', description:'A woman helps earthbound spirits resolve their unfinished business.', art:'mist', progress:0, quality:'HD'},
+    {id:'home-alone', title:'Home Alone', type:'Movie', year:'1990', genre:'Family', rating:'PG', length:'1h 43m', description:'A child left behind at Christmas defends his house from burglars.', art:'winter', progress:0, quality:'HD'}
+  ],
+  channels: [
+    {num:'101',name:'Glint Toons',slug:'toons',genre:'Animation',theme:'pokemon',shows:['Pokémon: Indigo League','Dragon Ball Z','Naruto','Yu-Gi-Oh!','Adult Swim Mix','Digimon Adventure']},
+    {num:'103',name:'Glint Cinema',slug:'cinema',genre:'Movies',theme:'cosmos',shows:['Jurassic Park','The Matrix','Home Alone','Back to the Future','John Wick','Interstellar']},
+    {num:'105',name:'Laugh Track',slug:'laugh',genre:'Comedy',theme:'party',shows:['The Office','Friends','Everybody Hates Chris','Psych','Modern Family','Everybody Loves Raymond']},
+    {num:'106',name:'Drama Central',slug:'drama',genre:'Drama',theme:'neon',shows:['Breaking Bad','The Wire','Dexter','Mad Men','Law & Order: SVU','Better Call Saul']},
+    {num:'107',name:'Dark Worlds',slug:'dark',genre:'Horror',theme:'forest',shows:['The Walking Dead','Supernatural','Stranger Things','Chucky','The Last of Us','The Twilight Zone']},
+    {num:'108',name:'Otherworlds',slug:'other',genre:'Fantasy + Sci-Fi',theme:'stellar',shows:['Star Trek: TNG','Doctor Who','Game of Thrones','The Mandalorian','Stargate SG-1','Merlin']}
+  ],
+  comics:[
+    {id:'one-piece',name:'One Piece',creator:'Eiichiro Oda',kind:'Manga',issues:'100+ volumes',art:'ocean',desc:'A pirate crew sails into a world of impossible dreams and grand adventures.',read:35},
+    {id:'jojo',name:'JoJo’s Bizarre Adventure',creator:'Hirohiko Araki',kind:'Manga',issues:'Multiple parts',art:'purple',desc:'Generations of the Joestar family face bizarre supernatural challenges.',read:12},
+    {id:'spider',name:'The Amazing Spider-Man',creator:'Marvel',kind:'Comics',issues:'Ongoing series',art:'spider',desc:'Peter Parker faces the pressures of heroism and ordinary life.',read:0},
+    {id:'batman',name:'Batman',creator:'DC',kind:'Comics',issues:'Multiple arcs',art:'bat',desc:'Gotham’s detective battles crime and the city’s darkest villains.',read:0},
+    {id:'berserk',name:'Berserk',creator:'Kentaro Miura',kind:'Manga',issues:'Ongoing series',art:'ember',desc:'A lone swordsman struggles through a merciless dark fantasy world.',read:62},
+    {id:'black-clover',name:'Black Clover',creator:'Yūki Tabata',kind:'Manga',issues:'Multiple volumes',art:'magic',desc:'A boy without magic seeks to become the Wizard King.',read:0},
+    {id:'xmen',name:'X-Men',creator:'Marvel',kind:'Comics',issues:'Many collections',art:'stellar',desc:'Mutant heroes fight for a world where everyone can belong.',read:0},
+    {id:'chainsaw',name:'Chainsaw Man',creator:'Tatsuki Fujimoto',kind:'Manga',issues:'Multiple arcs',art:'haze',desc:'A young hunter merges with a devil and enters a brutal new life.',read:0},
+    {id:'invincible',name:'Invincible',creator:'Image Comics',kind:'Comics',issues:'144 issues',art:'sunset',desc:'A young hero discovers that superpowers carry enormous consequences.',read:0},
+    {id:'vinland',name:'Vinland Saga',creator:'Makoto Yukimura',kind:'Manga',issues:'Complete story',art:'mountain',desc:'A Viking warrior searches for purpose beyond vengeance.',read:0}
+  ],
+  games:[
+    {id:'pancake',name:'Project Pancake',category:'Original',status:'In development',art:'pokemon',subtitle:'A birthday adventure across a hand-built world.',detail:'A custom Phaser adventure with exploration, stories, battles and cooperative systems.',tag:'FEATURED'},
+    {id:'glint-snake',name:'Neon Snake',category:'Playable Demo',status:'Play here',art:'matrix',subtitle:'A tiny arcade game included with this prototype.',detail:'A fully local keyboard-friendly Snake demo. No game server or saved progress.',tag:'PLAYABLE'},
+    {id:'rain',name:'Rain of Iron',category:'Original',status:'In development',art:'ember',subtitle:'A sprawling fantasy RPG in a handcrafted world.',detail:'Long-term native PC fantasy CRPG project; not a browser build.',tag:'DEVLOG'},
+    {id:'creature',name:'Creature MMO',category:'Original',status:'Prototype',art:'jungle',subtitle:'A multiplayer creature-catching engine.',detail:'An experimental MMO foundation using browser clients and persistent servers.',tag:'EXPERIMENT'},
+    {id:'nes',name:'Retro Vault',category:'Retro',status:'Not connected',art:'sunset',subtitle:'Classic games in a nostalgic gallery.',detail:'An EmulatorJS-ready catalog slot; no ROMs or console files are included.',tag:'CONCEPT'},
+    {id:'puzzle',name:'Puzzle Room',category:'Concept',status:'Concept',art:'purple',subtitle:'Quick challenges designed for short breaks.',detail:'A concept card representing future standalone browser mini-games.',tag:'CONCEPT'}
+  ],
+  projects:[
+    {id:'pancake-project',name:'Project Pancake',kind:'Browser RPG',status:'Active development',art:'pokemon',stack:['Phaser','TypeScript','Colyseus'],description:'A personalized birthday RPG with exploration, companions, battles, and multiplayer features.',updates:'Gameplay polish and deployment testing'},
+    {id:'rain-project',name:'Rain of Iron',kind:'Fantasy CRPG',status:'Planning & development',art:'ember',stack:['Godot','GDScript','Pixel Art'],description:'A standalone fantasy role-playing game with a sprawling radial world and contrasting civilizations.',updates:'Worldbuilding, game systems, early prototyping'},
+    {id:'mmo-project',name:'Creature MMO Engine',kind:'MMORPG Framework',status:'Architecture phase',art:'jungle',stack:['Phaser','Node.js','PostgreSQL'],description:'A persistent multiplayer engine for creature encounters, battles, economy and co-op.',updates:'Server-authoritative engine specification'},
+    {id:'glint-project',name:'Glint',kind:'Website',status:'UI concept',art:'cosmos',stack:['Web','Design System','Plex'],description:'This very entertainment platform: video, live television, comics, games, projects and servers.',updates:'Frontend mockup and product architecture'},
+    {id:'builder-project',name:'Map Toolkit',kind:'Development Tools',status:'Exploratory',art:'office',stack:['TypeScript','Tiled','Game Tools'],description:'Ideas for improving scene and map editing workflows for games.',updates:'Concept-stage tools and experiments'}
+  ],
+  servers:[
+    {id:'mc-survival',name:'Minecraft · Modded Survival',game:'Minecraft Java',version:'Version TBD',modpack:'Curated Modpack',players:'—',status:'Not connected',art:'jungle',description:'A collaborative modded world with quests, building and progression.',requirements:['Install Minecraft Java Edition','Confirm supported version and mod loader','Install the approved pack when available','Request whitelist access']},
+    {id:'mc-vanilla',name:'Minecraft · Community Realm',game:'Minecraft',version:'Version TBD',modpack:'Vanilla / light mods',players:'—',status:'Not connected',art:'mountain',description:'A straightforward community world for exploration, building and group projects.',requirements:['Join with an authorized Minecraft account','Check server edition and version','Review community rules','Request an invitation']},
+    {id:'valheim',name:'Valheim · Meadows',game:'Valheim',version:'Version TBD',modpack:'Optional mods',players:'—',status:'Not connected',art:'forest',description:'Cooperative Viking survival, base-building, and boss progression.',requirements:['Install Valheim','Match the server game version','Install required mods if configured','Request server join information']}
+  ],
+  activities:[
+    {icon:'play',name:'Continue the journey',description:'Resume Interstellar at 38%',when:'Demo progress'},
+    {icon:'tv',name:'Six channels',description:'Your cable-style guide is ready for a preview.',when:'Mock schedule'},
+    {icon:'book',name:'Continue reading',description:'One Piece · next chapter',when:'Sample data'},
+    {icon:'git',name:'Studio updates',description:'Project Pancake · development highlights',when:'Sample content'}
+  ]
+};
