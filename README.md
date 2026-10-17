@@ -10,6 +10,7 @@ A premium, frontend-only entertainment lounge. Built with static HTML, CSS, and 
 | --- | --- |
 | `#home` | Cinematic feature, resume shelf, six-channel preview, reading, arcade, studio and community worlds |
 | `#watch` | Portrait catalog, landscape shelves, genres, search, sorting, saved list, title/episode details and simulated player |
+| `#requests` | Local-only Request Media prototype with movie/series discovery preview, saved demo requests, and planned status/ETA flow |
 | `#live` | Six canonical channels, clock-derived guide, channel surfing, compact guide, timeshift simulation and recording bookmarks |
 | `#comics` | Manga/comics filters, creator search, reading shelves and a 12-page original illustrated reader |
 | `#arcade` | Original-first gaming lounge, filters/search, development previews and playable Neon Snake |
@@ -33,11 +34,11 @@ Open http://127.0.0.1:4173/. Keep `assets/`, `css/`, and `js/` beside `index.htm
 
 ## Demo boundaries
 
-No Plex, playout engine, Komga, authentication, Stripe, or game-server service is connected. Media names and metadata are illustrative; no commercial video, book files, ROMs, or real payment data are included. Server addresses, versions, and counts remain unavailable until configured. Project art is original concept art, not a claim of actual gameplay screenshots or released builds. Only Neon Snake is playable here.
+No Plex, Seerr, Sonarr, Radarr, Prowlarr, qBittorrent, playout engine, Komga, authentication, Stripe, or game-server service is connected. Request Media selections remain in local browser storage only; they are **not submitted**, shared, queued, downloaded or assigned a live ETA. Media names and metadata are illustrative; no commercial video, book files, ROMs, or real payment data are included. Server addresses, versions, and counts remain unavailable until configured. Project art is original concept art, not a claim of actual gameplay screenshots or released builds. Only Neon Snake is playable here.
 
 The Watch player simulates pause, seek, captions, mute and fullscreen. Live uses illustrative half-hour schedule slots and a virtual 30-minute buffer. Record saves a bookmark, never video. The reader shows **The Quiet Signal**, an original 12-page illustration study, regardless of the catalog title chosen.
 
-Profile, preferences, watchlist, comic bookmarks, TV bookmarks and VIP preview use `glint_*` localStorage keys. No passwords or tokens are stored. Reset through **Account → Privacy & access → Reset local demo**. Signing out returns to a validated local-profile form; it does not contact an identity provider.
+Profile, preferences, request previews, watchlist, comic bookmarks, TV bookmarks and VIP preview use `glint_*` localStorage keys. No passwords or tokens are stored. Reset through **Account → Privacy & access → Reset local demo**. Signing out returns to a validated local-profile form; it does not contact an identity provider.
 
 ## Keyboard and accessibility
 
@@ -53,7 +54,7 @@ Profile, preferences, watchlist, comic bookmarks, TV bookmarks and VIP preview u
 - `js/data.js`: the preserved demonstration catalog.
 - `js/core.js`: shared state, icons, storage, search, event dispatch and original Snake game.
 - `js/shell.js`: navigation, shared cards, homepage, modal/focus infrastructure and rendering.
-- `js/media.js`, `js/live.js`, `js/community.js`: section views and local interactions.
+- `js/media.js`, `js/live.js`, `js/community.js`, `js/requests.js`: section views and local interactions.
 - `css/base.css`: retained primitive/component foundation; `css/design.css`: visual tokens and shared layouts; section CSS files scope specialized experiences.
 - `assets/`: bundled font, original SVG studies, optimized cinematic hero and favicon. See [artwork provenance](docs/ARTWORK.md).
 - `docs/`: design direction, validation report, screenshots and future integration boundaries.
