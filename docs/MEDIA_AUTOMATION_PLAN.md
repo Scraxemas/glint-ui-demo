@@ -53,6 +53,8 @@ Use legally available, licensed, owned, or otherwise authorized content. TMDb/Pl
 
 ## Glint UI integration path
 
+**Frontend preview (implemented):** GitHub Pages includes a `#requests` page with sample catalog search, movie/series filters, local-only sample requests, and a conceptual status/ETA progression. No real Seerr request is submitted, no remote request queue exists, and the UI shows no live ETA. The production request system remains a later backend project.
+
 **Phase 0:** Linux Mint and storage/network readiness; no media automation services installed yet.
 
 **Phase 1A:** Deploy Docker Engine/Compose and validate disk mounts, local networking and backups.
@@ -61,7 +63,7 @@ Use legally available, licensed, owned, or otherwise authorized content. TMDb/Pl
 
 **Phase 1C:** Deploy qBittorrent with Gluetun/NordVPN, configure permitted sources, and verify kill-switch behavior and any Prowlarr privacy route.
 
-**Phase 1D:** Connect Komga/ErsatzTV and later expose a **protected Glint request entrypoint** backed by a server-side proxy or controlled link to Seerr. Don't expose Seerr/Arr API tokens in client-side JavaScript or imply the demo's simulated catalog is real availability.
+**Phase 1D:** Connect Komga/ErsatzTV and turn the `#requests` UI preview into a **protected Glint request entrypoint** backed by authenticated server-side requests to Seerr, or initially a controlled link to Seerr. Add title discovery, season selection, per-user request history, anti-abuse controls, and entitlement checks. Fetch requests and statuses via Seerr, download progress/ETA via a restricted service that correlates Sonarr/Radarr queue items with qBittorrent records; never expose downloader credentials, torrent hashes, paths, trackers, Seerr/Arr API tokens, or other admin data to users. Before a transfer starts show no precise download ETA; while downloading show a qualified changing estimate, and after downloading show separate import/scan status. Don't imply the demo catalog is actual Plex availability.
 
 **Acceptance checks:** Onboarding works; users without admin rights cannot alter automation; test request is approved and reaches correct manager; import goes to correct library; Plex sees imported test file; Seerr updates; VPN disconnect stops torrents; invalid remote access is rejected; on reboot stack resumes appropriately; backups can restore configurations.
 
