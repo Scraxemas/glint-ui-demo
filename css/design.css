@@ -20,3 +20,5 @@ html{scroll-behavior:auto;scroll-padding-top:90px}body{font-family:Manrope,'Sego
 
 /* TMDb-enhanced catalog covers, preserving locally bundled artwork as fallback. */
 .poster>.tmdb-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .35s ease}.poster>.tmdb-poster[hidden]{display:none}.poster:has(>.tmdb-poster:not([hidden])) .poster-caption{opacity:0}.media-card:hover .tmdb-poster{transform:scale(1.035)}
+
+.tmdb-credit{display:flex;align-items:center;gap:12px;margin:22px 36px 80px;padding-top:18px;border-top:1px solid #ffffff12;color:var(--muted);font-size:11px;line-height:1.5;max-width:1000px}.tmdb-credit img{width:54px;height:auto;display:block}.tmdb-credit span{max-width:730px}@media(max-width:600px){.tmdb-credit{margin:18px 18px 90px;align-items:flex-start}.tmdb-credit img{width:48px}}
